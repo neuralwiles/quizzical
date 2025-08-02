@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  background-color: #f5f7fb;
+  color: #293264;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-style: bold;
+}
+
+h2 {
+  font-size: 1rem;
+  font-style: bold;
+}
+
+h3 {
+  margin: 0;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  font-style: bold;
+}
+
+p {
+  margin: 0;
+  margin-block: 8px 30px;
+  font-size: 1rem;
+}
+
+hr {
+  height: 1px;
+  margin-top: 16px;
+  border-width: 0;
+  color: #dbdef0;
+  background-color: #dbdef0;
+}
+
+button {
+  width: 120px;
+  height: 35px;
+  margin-top: 14px;
+  font-family: "Karla", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #6778cc;
+  }
+}
+
+button.start-button {
+  width: 190px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  border: none;
+  border-radius: 15px;
+  &:hover {
+    background-color: #6778cc;
+  }
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+input[type="radio"] + label {
+  padding: 3.5px 8px;
+  border: 1px solid #4d5b9e;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background: #d6dbf5;
+  border-color: #d6dbf5;
+}
+
+input[type="radio"]:disabled + label {
+  opacity: 50%;
+}
+
+input[type="radio"]:disabled + label.correct {
+  opacity: 100%;
+  background: #94d7a2;
+  border-color: #94d7a2;
+}
+
+input[type="radio"]:disabled + label.incorrect {
+  opacity: 50%;
+  background: #f8bcbc;
+  border-color: #f8bcbc;
+}
+
+section.question {
+  width: 100%;
+}
+
+div.question-elements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+div.results-and-button {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
